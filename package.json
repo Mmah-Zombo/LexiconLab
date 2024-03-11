@@ -1,0 +1,30 @@
+{
+  "name": "lexiconlab",
+  "version": "1.0.0",
+  "description": "An online English dictionary",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-fileupload": "^1.4.3",
+    "express-session": "^1.18.0",
+    "mongodb": "4.1",
+    "mongoose": "^8.2.1",
+    "mongoose-unique-validator": "^5.0.0",
+    "redis": "^4.6.13"
+  }
+}
