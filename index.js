@@ -8,6 +8,9 @@ const flash = require('connect-flash');
 const path = require('path');
 const mongoose = require('mongoose');
 
+const registerUser = require('./controllers/registerUser');
+const registerView = require('./controllers/registerController');
+
 mongoose.connect('mongodb://localhost:27017/LexiconLab');
 
 app = express();
@@ -25,6 +28,14 @@ app.use(fileupload());
 app.use(flash());
 app.get('/', (req, res) => {
     res.render('index');
+});
+
+app.get('/register', registerView);
+
+app.post('/register', registerUser);
+
+app.get('/login', (req, res) => {
+    res.render('login')
 });
 
 app.listen(4000, () => {
