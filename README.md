@@ -25,7 +25,13 @@ npm install
 This command installs all dependencies for the applicaiton. Next get your CSS up and running with this command:
 
 ``` bash
- npx tailwindcss -i ./public/css/app.css -o ./public/css/style.css --watch
+npm run build
+```
+
+To update the CSS in your browser, immediately when cahnges are made to the app's style, run this command:
+
+```bash
+npm run watch
 ```
 
 Finally run this command to start the server:
