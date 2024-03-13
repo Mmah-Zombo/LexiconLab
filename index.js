@@ -1,10 +1,14 @@
 const express = require('express');
+
+const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const path = require('path');
+const expressSession = require('express-session');
 const fileupload = require('express-fileupload');
 const flash = require('connect-flash');
-const expressSession = require('express-session');
-const bodyParser = require('body-parser');
+const path = require('path');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/LexiconLab');
 
 app = express();
 
