@@ -1,4 +1,4 @@
-# LEXICON LAB (Staging Branch)
+# LEXICON LAB
 
 ## About
 
