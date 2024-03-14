@@ -10,6 +10,7 @@ module.exports = (req, res) => {
             .then((pass) => {
                 if (pass) {
                     req.session.userId = user._id;
+                    req.flash('message', 'logged in to your');
                     return res.redirect('/');
                 } else {
                     req.flash('data', req.body);

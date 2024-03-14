@@ -39,7 +39,8 @@ global.loggedIn = null;
 app.use('*', sessionSetter);
 
 app.get('/', (req, res) => {
-    res.render('index');
+    const message = req.flash('message');
+    res.render('index', { message });
 });
 
 app.get('/register', registerView);

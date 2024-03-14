@@ -5,6 +5,7 @@ module.exports = async (req, res) => {
     User.create(req.body)
     .then((user) => {
         req.session.userId = user._id;
+        req.flash('message', 'created an');
         res.redirect('/');
     })
     .catch(err => {
