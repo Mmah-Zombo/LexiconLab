@@ -16,17 +16,21 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        minlength: 8,
-        maxlength: 20,
+        minlength: [8, "Password must be atleast 8 characters long."],
+        maxlength: [20, "Password must not be more than 20 characters long."],
         required: true
     },
     created_at: {
         type: Date,
         default: Date.now
+    },
+    updated_at: {
+        type: Date,
+        default: Date.now
     }
 });
 
-userSchema.plugin(uniqueValidator, { type: 'mongoose-unique-validator' });
+userSchema.plugin(uniqueValidator, { message: 'Sorry, {PATH} already taken.' });
 
 userSchema.pre('save', function (next) {
     const user = this;
