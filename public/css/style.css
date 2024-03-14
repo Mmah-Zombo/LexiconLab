@@ -568,8 +568,16 @@ video {
   top: -16rem;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .left-4 {
   left: 1rem;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-20 {
@@ -1099,6 +1107,10 @@ video {
     top: -24rem;
   }
 
+  .md\:left-0 {
+    left: 0px;
+  }
+
   .md\:left-10 {
     left: 2.5rem;
   }
@@ -1168,6 +1180,14 @@ video {
     bottom: 0px;
   }
 
+  .lg\:bottom-1\/2 {
+    bottom: 50%;
+  }
+
+  .lg\:left-0 {
+    left: 0px;
+  }
+
   .lg\:left-24 {
     left: 6rem;
   }
@@ -1178,6 +1198,10 @@ video {
 
   .lg\:top-24 {
     top: 6rem;
+  }
+
+  .lg\:top-\[40\%\] {
+    top: 40%;
   }
 
   .lg\:mb-20 {
