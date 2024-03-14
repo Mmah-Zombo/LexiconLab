@@ -10,6 +10,8 @@ const session = require('express-session');
 
 const registerUser = require('./controllers/registerUser');
 const registerView = require('./controllers/registerController');
+const loginView = require('./controllers/loginController');
+const sessionSetter = require('./controllers/middlewares/sessionSetter');
 
 mongoose.connect('mongodb://localhost:27017/LexiconLab');
 
@@ -30,6 +32,9 @@ app.use(session({
 }));
 app.use(flash());
 
+global.loggedIn = null;
+
+app.use('*', sessionSetter);
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -39,9 +44,7 @@ app.get('/register', registerView);
 
 app.post('/register', registerUser);
 
-app.get('/login', (req, res) => {
-    res.render('login')
-});
+app.get('/login', loginView);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')
