@@ -11,7 +11,7 @@ module.exports = (req, res) => {
                 if (pass) {
                     req.session.userId = user._id;
                     req.flash('message', 'logged in to your');
-                    return res.redirect('/');
+                    return res.redirect('/settings');
                 } else {
                     req.flash('errorMessage', 'Incorrect Password.');
                     req.flash('data', req.body);

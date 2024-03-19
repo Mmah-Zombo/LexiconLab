@@ -12,6 +12,7 @@ const registerUser = require('./controllers/registerUser');
 const registerView = require('./controllers/registerController');
 const loginView = require('./controllers/loginController');
 const loginUser = require('./controllers/loginUser');
+const settingsView = require('./controllers/user-settingsController');
 
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
 
@@ -49,6 +50,8 @@ app.post('/register', registerUser);
 
 app.get('/login', loginView);
 app.post('/login', loginUser);
+
+app.get('/settings', settingsView);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')

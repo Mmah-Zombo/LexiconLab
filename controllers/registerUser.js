@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
     .then((user) => {
         req.session.userId = user._id;
         req.flash('message', 'created an');
-        res.redirect('/');
+        res.redirect('/settings');
     })
     .catch(err => {
         const validationErrors = Object.keys(err.errors).map(key => err.errors[key].message);
