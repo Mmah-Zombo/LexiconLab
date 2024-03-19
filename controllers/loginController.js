@@ -5,5 +5,5 @@ module.exports = (req, res) => {
         username = data.username;
         password = data.password;
     }
-    res.render('login', { username, password})
+    res.render('login', { username, password, errorMessage: req.flash('errorMessage')});
 };

@@ -17,7 +17,23 @@
                 <path d="M221.574 107.343C221.574 134.607 199.472 156.709 172.208 156.709C144.944 156.709 122.842 134.607 122.842 107.343C122.842 80.0786 144.944 57.9766 172.208 57.9766C199.472 57.9766 221.574 80.0786 221.574 107.343ZM132.643 107.343C132.643 129.194 150.357 146.907 172.208 146.907C194.059 146.907 211.772 129.194 211.772 107.343C211.772 85.492 194.059 67.7784 172.208 67.7784C150.357 67.7784 132.643 85.492 132.643 107.343Z" fill="#DA4167"/>
             </svg>
         </div>
-        
+
+        <% if (errorMessage && Object.keys(errorMessage).length !== 0) { %>
+            <div class="absolute top-40 lg:top-44">
+                <div class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <span class="sr-only">Danger</span>
+                <div>
+                <span class="font-medium">Oops!</span>
+                    <ul class="mt-1.5 list-disc list-inside">
+                        <%= errorMessage %>  
+                </ul>
+                </div>
+                </div>
+            </div>
+        <% } %>
         <div class="bg-white w-[40rem] shadow-2xl rounded-xl">
             <div class="w-full flex min-h-full flex-col justify-center px-0 py-6">
                 <div class="border-b border-black pb-6 ">

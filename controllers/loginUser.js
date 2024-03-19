@@ -13,6 +13,7 @@ module.exports = (req, res) => {
                     req.flash('message', 'logged in to your');
                     return res.redirect('/');
                 } else {
+                    req.flash('errorMessage', 'Incorrect Password.');
                     req.flash('data', req.body);
                     return res.redirect('/login');
                 }
@@ -20,6 +21,7 @@ module.exports = (req, res) => {
             .catch((err) => console.log(err));
             
         } else {
+            req.flash('errorMessage', 'Username does not exist.');
             req.flash('data', req.body);
             return res.redirect('/login');
         }
