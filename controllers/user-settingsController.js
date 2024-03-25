@@ -1,3 +1,5 @@
 module.exports = (req, res) => {
-    res.render('user-settings', {message: req.flash('message')});
+    photoUrl = authUser ? authUser.profile_photo : null;
+    console.log(photoUrl)
+    res.render('user-settings', {message: req.flash('message'), photoUrl});
 }

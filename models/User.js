@@ -20,6 +20,12 @@ const userSchema = new Schema({
         maxlength: [20, "Password must not be more than 20 characters long."],
         required: true
     },
+
+    profile_photo: {
+        type: String,
+        default: null
+    },
+
     created_at: {
         type: Date,
         default: Date.now
