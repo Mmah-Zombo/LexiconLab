@@ -13,8 +13,10 @@ const registerView = require('./controllers/registerController');
 const loginView = require('./controllers/loginController');
 const loginUser = require('./controllers/loginUser');
 const settingsView = require('./controllers/user-settingsController');
+const updateProfilePhoto = require('./controllers/profile_photoController');
 
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
+const AuthUser = require('./controllers/middlewares/Auth');
 
 mongoose.connect('mongodb://localhost:27017/LexiconLab');
 
@@ -36,8 +38,9 @@ app.use(session({
 app.use(flash());
 
 global.loggedIn = null;
+global.authUser = null;
 
-app.use('*', sessionSetter);
+app.use('*', sessionSetter, AuthUser);
 
 app.get('/', (req, res) => {
     const message = req.flash('message');
@@ -52,6 +55,8 @@ app.get('/login', loginView);
 app.post('/login', loginUser);
 
 app.get('/settings', settingsView);
+
+app.post('/profile_photo', updateProfilePhoto);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')
