@@ -1,5 +1,6 @@
 const express = require('express');
 
+// Dependencies
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const fileupload = require('express-fileupload');
@@ -8,6 +9,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const session = require('express-session');
 
+// Controller Functions
 const registerUser = require('./controllers/registerUser');
 const registerView = require('./controllers/registerController');
 const loginView = require('./controllers/loginController');
@@ -15,12 +17,16 @@ const loginUser = require('./controllers/loginUser');
 const settingsView = require('./controllers/user-settingsController');
 const updateProfilePhoto = require('./controllers/profile_photoController');
 const updateUser = require('./controllers/updateUser');
+const deleteAccount = require('./controllers/deleteUser');
 
+// Middleware Functions
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
 const AuthUser = require('./controllers/middlewares/Auth');
 
+// Connects to MongoDB server using mongoose
 mongoose.connect('mongodb://localhost:27017/LexiconLab');
 
+// Express app configurations
 app = express();
 
 app.use(express.static('public'));
@@ -43,6 +49,7 @@ global.authUser = null;
 
 app.use('*', sessionSetter, AuthUser);
 
+// Routes
 app.get('/', (req, res) => {
     const message = req.flash('message');
     res.render('index', { message });
@@ -61,6 +68,7 @@ app.post('/profile_photo', updateProfilePhoto);
 app.post('/update_name', updateUser.updateName);
 app.post('/update_password', updateUser.updatePassword);
 
+app.post('/delete_account', deleteAccount);
 app.listen(4000, () => {
     console.log('App started on port 4000')
 });
