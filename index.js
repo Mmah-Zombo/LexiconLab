@@ -14,6 +14,7 @@ const loginView = require('./controllers/loginController');
 const loginUser = require('./controllers/loginUser');
 const settingsView = require('./controllers/user-settingsController');
 const updateProfilePhoto = require('./controllers/profile_photoController');
+const updateUser = require('./controllers/updateUser');
 
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
 const AuthUser = require('./controllers/middlewares/Auth');
@@ -57,6 +58,7 @@ app.post('/login', loginUser);
 app.get('/settings', settingsView);
 
 app.post('/profile_photo', updateProfilePhoto);
+app.post('/update_name', updateUser);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')

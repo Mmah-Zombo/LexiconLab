@@ -1113,12 +1113,12 @@ input:checked + .toggle-bg {
   left: 0px;
 }
 
-.left-10 {
-  left: 2.5rem;
-}
-
 .left-4 {
   left: 1rem;
+}
+
+.left-5 {
+  left: 1.25rem;
 }
 
 .right-0 {
@@ -1161,8 +1161,32 @@ input:checked + .toggle-bg {
   top: 10rem;
 }
 
-.left-5 {
-  left: 1.25rem;
+.top-5 {
+  top: 1.25rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.left-\[48\%\] {
+  left: 48%;
+}
+
+.left-\[20\%\] {
+  left: 20%;
+}
+
+.left-\[10\%\] {
+  left: 10%;
+}
+
+.left-\[15\%\] {
+  left: 15%;
 }
 
 .z-10 {
@@ -1298,6 +1322,10 @@ input:checked + .toggle-bg {
   margin-top: 2px;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -1383,6 +1411,14 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -1438,6 +1474,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .min-w-full {
@@ -1629,6 +1669,10 @@ input:checked + .toggle-bg {
 
 .border-0 {
   border-width: 0px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-y {
@@ -2218,6 +2262,10 @@ input:checked + .toggle-bg {
   outline-color: #f4d35e;
 }
 
+.focus\:outline-red-500:focus {
+  outline-color: #F05252;
+}
+
 .focus\:ring-0:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -2433,6 +2481,14 @@ input:checked + .toggle-bg {
     top: 2.5rem;
   }
 
+  .md\:right-7 {
+    right: 1.75rem;
+  }
+
+  .md\:left-5 {
+    left: 1.25rem;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -2458,6 +2514,10 @@ input:checked + .toggle-bg {
     height: 100%;
   }
 
+  .md\:h-12 {
+    height: 3rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2473,6 +2533,10 @@ input:checked + .toggle-bg {
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .md\:w-44 {
+    width: 11rem;
   }
 
   .md\:justify-end {
