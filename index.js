@@ -58,7 +58,8 @@ app.post('/login', loginUser);
 app.get('/settings', settingsView);
 
 app.post('/profile_photo', updateProfilePhoto);
-app.post('/update_name', updateUser);
+app.post('/update_name', updateUser.updateName);
+app.post('/update_password', updateUser.updatePassword);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')

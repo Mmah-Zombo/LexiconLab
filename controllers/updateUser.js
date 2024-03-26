@@ -1,7 +1,7 @@
-const path = require('path');
+const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
-module.exports = (req, res) => {
+function updateName(req, res) {
     const { username, name } = req.body;
     User.findByIdAndUpdate(req.session.userId, {username, name})
     .then(user => {
@@ -19,3 +19,30 @@ module.exports = (req, res) => {
         console.log(err)
     })
 }
+
+function updatePassword(req, res) { 
+    const { current_password, new_password, confirm_password } = req.body;
+
+    if ( confirm_password !== new_password ) {
+        req.flash('message', 'New password does not match.');
+        return res.redirect('/settings');
+    }
+
+    bcrypt.compare(current_password, authUser.password)
+    .then(pass => {
+        bcrypt.hash(new_password, 10, function(err, hash) { 
+            User.findByIdAndUpdate(authUser._id, { password: hash })
+            .then(user => {
+                req.flash('message', 'Password successfully changed.');
+                return res.redirect('/settings');
+             });
+        });
+    })
+    .catch(err => {
+        req.flash('message', 'Incorrect password.');
+        res.redirect('/settings');
+        console.log(err);
+    }) 
+}
+
+module.exports = { updateName, updatePassword }

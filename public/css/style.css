@@ -1117,8 +1117,8 @@ input:checked + .toggle-bg {
   left: 1rem;
 }
 
-.left-5 {
-  left: 1.25rem;
+.left-\[15\%\] {
+  left: 15%;
 }
 
 .right-0 {
@@ -1141,10 +1141,6 @@ input:checked + .toggle-bg {
   right: 16rem;
 }
 
-.right-7 {
-  right: 1.75rem;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -1157,36 +1153,12 @@ input:checked + .toggle-bg {
   top: 2.5rem;
 }
 
-.top-40 {
-  top: 10rem;
-}
-
-.top-5 {
-  top: 1.25rem;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
 .top-3 {
   top: 0.75rem;
 }
 
-.left-\[48\%\] {
-  left: 48%;
-}
-
-.left-\[20\%\] {
-  left: 20%;
-}
-
-.left-\[10\%\] {
-  left: 10%;
-}
-
-.left-\[15\%\] {
-  left: 15%;
+.top-40 {
+  top: 10rem;
 }
 
 .z-10 {
@@ -1298,16 +1270,16 @@ input:checked + .toggle-bg {
   margin-top: 2.5rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
 }
 
 .mt-4 {
@@ -1320,10 +1292,6 @@ input:checked + .toggle-bg {
 
 .mt-\[2px\] {
   margin-top: 2px;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .block {
@@ -1358,8 +1326,8 @@ input:checked + .toggle-bg {
   display: none;
 }
 
-.h-12 {
-  height: 3rem;
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-24 {
@@ -1409,14 +1377,6 @@ input:checked + .toggle-bg {
 
 .h-full {
   height: 100%;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .min-h-full {
@@ -1474,10 +1434,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .min-w-full {
@@ -2469,6 +2425,10 @@ input:checked + .toggle-bg {
     left: 2.5rem;
   }
 
+  .md\:left-5 {
+    left: 1.25rem;
+  }
+
   .md\:right-10 {
     right: 2.5rem;
   }
@@ -2477,16 +2437,12 @@ input:checked + .toggle-bg {
     right: 8rem;
   }
 
-  .md\:top-10 {
-    top: 2.5rem;
-  }
-
   .md\:right-7 {
     right: 1.75rem;
   }
 
-  .md\:left-5 {
-    left: 1.25rem;
+  .md\:top-10 {
+    top: 2.5rem;
   }
 
   .md\:mb-0 {
@@ -2505,6 +2461,10 @@ input:checked + .toggle-bg {
     display: flex;
   }
 
+  .md\:h-12 {
+    height: 3rem;
+  }
+
   .md\:h-fit {
     height: -moz-fit-content;
     height: fit-content;
@@ -2512,10 +2472,6 @@ input:checked + .toggle-bg {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-12 {
-    height: 3rem;
   }
 
   .md\:w-1\/2 {
@@ -2533,10 +2489,6 @@ input:checked + .toggle-bg {
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .md\:w-44 {
-    width: 11rem;
   }
 
   .md\:justify-end {
