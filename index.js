@@ -22,6 +22,7 @@ const deleteAccount = require('./controllers/deleteUser');
 // Middleware Functions
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
 const AuthUser = require('./controllers/middlewares/Auth');
+const redirectIfNotLoggedIn = require('./controllers/middlewares/redirectIfNotLoggedIn');
 
 // Connects to MongoDB server using mongoose
 mongoose.connect('mongodb://localhost:27017/LexiconLab');
@@ -62,13 +63,14 @@ app.post('/register', registerUser);
 app.get('/login', loginView);
 app.post('/login', loginUser);
 
-app.get('/settings', settingsView);
+app.get('/settings', redirectIfNotLoggedIn, settingsView);
 
-app.post('/profile_photo', updateProfilePhoto);
-app.post('/update_name', updateUser.updateName);
-app.post('/update_password', updateUser.updatePassword);
+app.post('/profile_photo', redirectIfNotLoggedIn, updateProfilePhoto);
+app.post('/update_name', redirectIfNotLoggedIn, updateUser.updateName);
+app.post('/update_password', redirectIfNotLoggedIn, updateUser.updatePassword);
 
-app.post('/delete_account', deleteAccount);
+app.post('/delete_account', redirectIfNotLoggedIn, deleteAccount);
+
 app.listen(4000, () => {
     console.log('App started on port 4000')
 });
