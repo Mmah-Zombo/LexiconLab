@@ -1153,28 +1153,12 @@ input:checked + .toggle-bg {
   top: 2.5rem;
 }
 
-.top-3 {
-  top: 0.75rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-16 {
-  top: 4rem;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
 .top-28 {
   top: 7rem;
+}
+
+.top-3 {
+  top: 0.75rem;
 }
 
 .z-10 {
@@ -2461,24 +2445,8 @@ input:checked + .toggle-bg {
     top: 2.5rem;
   }
 
-  .md\:top-24 {
-    top: 6rem;
-  }
-
-  .md\:top-20 {
-    top: 5rem;
-  }
-
-  .md\:top-0 {
-    top: 0px;
-  }
-
   .md\:top-14 {
     top: 3.5rem;
-  }
-
-  .md\:top-12 {
-    top: 3rem;
   }
 
   .md\:top-8 {
@@ -2573,10 +2541,6 @@ input:checked + .toggle-bg {
 
   .lg\:top-24 {
     top: 6rem;
-  }
-
-  .lg\:top-44 {
-    top: 11rem;
   }
 
   .lg\:top-\[40\%\] {

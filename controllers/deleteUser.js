@@ -9,7 +9,6 @@ module.exports = (req, res ) => {
         if (pass) {
             User.findByIdAndDelete(authUser._id)
             .then(user => {
-                req.flash('message', 'User deleted');
                 return res.redirect('/register');
             })
         } else {

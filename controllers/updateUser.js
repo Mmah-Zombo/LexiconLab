@@ -30,13 +30,18 @@ function updatePassword(req, res) {
 
     bcrypt.compare(current_password, authUser.password)
     .then(pass => {
-        bcrypt.hash(new_password, 10, function(err, hash) { 
-            User.findByIdAndUpdate(authUser._id, { password: hash, updated_at: Date.now() })
-            .then(user => {
-                req.flash('message', 'Password successfully changed.');
-                return res.redirect('/settings');
-             });
-        });
+        if (pass) {
+            bcrypt.hash(new_password, 10, function(err, hash) { 
+                User.findByIdAndUpdate(authUser._id, { password: hash, updated_at: Date.now() })
+                .then(user => {
+                    req.flash('message', 'Password successfully changed.');
+                    return res.redirect('/settings');
+                 });
+            });
+        } else {
+            req.flash('message', 'Incorrect password.');
+            return res.redirect('/settings');
+        }
     })
     .catch(err => {
         req.flash('message', 'Incorrect password.');
