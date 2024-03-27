@@ -5,7 +5,7 @@ module.exports = (req, res) => {
     const photo = req.files.photo;
     photo.mv(path.resolve(__dirname, '..', 'public/img', photo.name))
     .catch(err => {throw err});
-    User.findByIdAndUpdate(req.session.userId, {profile_photo: '/img/' + photo.name})
+    User.findByIdAndUpdate(req.session.userId, { profile_photo: '/img/' + photo.name, updated_at: Date.now() })
     .then(user => {
         req.flash('message', 'Profile photo successfully added.')
         return res.redirect('/settings');

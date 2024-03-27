@@ -10,7 +10,7 @@ module.exports = (req, res) => {
             .then((pass) => {
                 if (pass) {
                     req.session.userId = user._id;
-                    req.flash('message', 'logged in to your');
+                    req.flash('message', 'Successfully logged in to your account.');
                     return res.redirect('/settings');
                 } else {
                     req.flash('errorMessage', 'Incorrect Password.');
