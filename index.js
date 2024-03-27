@@ -18,6 +18,7 @@ const settingsView = require('./controllers/user-settingsController');
 const updateProfilePhoto = require('./controllers/profile_photoController');
 const updateUser = require('./controllers/updateUser');
 const deleteAccount = require('./controllers/deleteUser');
+const logout = require('./controllers/logoutUser');
 
 // Middleware Functions
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
@@ -69,6 +70,7 @@ app.post('/profile_photo', redirectIfNotLoggedIn, updateProfilePhoto);
 app.post('/update_name', redirectIfNotLoggedIn, updateUser.updateName);
 app.post('/update_password', redirectIfNotLoggedIn, updateUser.updatePassword);
 
+app.post('/logout', logout);
 app.post('/delete_account', redirectIfNotLoggedIn, deleteAccount);
 
 app.listen(4000, () => {
