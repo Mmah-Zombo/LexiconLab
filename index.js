@@ -15,6 +15,9 @@ const loginUser = require('./controllers/loginUser');
 const settingsView = require('./controllers/user-settingsController');
 const updateProfilePhoto = require('./controllers/profile_photoController');
 
+const dashboardView = require('./controllers/dashboardController');
+
+
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
 const AuthUser = require('./controllers/middlewares/Auth');
 
@@ -55,6 +58,8 @@ app.get('/login', loginView);
 app.post('/login', loginUser);
 
 app.get('/settings', settingsView);
+
+app.get('/dashboard', dashboardView);
 
 app.post('/profile_photo', updateProfilePhoto);
 
