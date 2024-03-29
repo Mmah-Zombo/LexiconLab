@@ -1161,6 +1161,14 @@ input:checked + .toggle-bg {
   top: 0.75rem;
 }
 
+.left-\[30\%\] {
+  left: 30%;
+}
+
+.left-\[50\%\] {
+  left: 50%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1181,28 +1189,8 @@ input:checked + .toggle-bg {
   z-index: 50;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
-
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-
-.col-span-9 {
-  grid-column: span 9 / span 9;
+.col-span-10 {
+  grid-column: span 10 / span 10;
 }
 
 .-mx-1 {
@@ -1230,19 +1218,13 @@ input:checked + .toggle-bg {
   margin-right: auto;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.-mt-1 {
+  margin-top: -0.25rem;
 }
 
 .mb-1 {
@@ -1317,12 +1299,16 @@ input:checked + .toggle-bg {
   margin-top: 0.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -1381,6 +1367,10 @@ input:checked + .toggle-bg {
   height: 0.75rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1418,10 +1408,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
 .h-screen {
   height: 100vh;
 }
@@ -1438,6 +1424,10 @@ input:checked + .toggle-bg {
   width: 50%;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -1450,12 +1440,12 @@ input:checked + .toggle-bg {
   width: 0.75rem;
 }
 
-.w-4 {
-  width: 1rem;
+.w-32 {
+  width: 8rem;
 }
 
-.w-44 {
-  width: 11rem;
+.w-4 {
+  width: 1rem;
 }
 
 .w-64 {
@@ -1464,6 +1454,10 @@ input:checked + .toggle-bg {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .w-96 {
@@ -1481,18 +1475,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .min-w-full {
@@ -1582,28 +1564,16 @@ input:checked + .toggle-bg {
   list-style-type: disc;
 }
 
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-cols-8 {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1715,12 +1685,21 @@ input:checked + .toggle-bg {
   border-bottom-width: 1px;
 }
 
-.border-t-4 {
-  border-top-width: 4px;
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-t-2 {
   border-top-width: 2px;
+}
+
+.border-t-4 {
+  border-top-width: 4px;
+}
+
+.border-antique-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 240 218 / var(--tw-border-opacity));
 }
 
 .border-black {
@@ -1973,11 +1952,6 @@ input:checked + .toggle-bg {
   text-align: center;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2110,6 +2084,10 @@ input:checked + .toggle-bg {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .shadow {
@@ -2528,12 +2506,40 @@ input:checked + .toggle-bg {
     top: 3.5rem;
   }
 
+  .md\:top-6 {
+    top: 1.5rem;
+  }
+
   .md\:top-8 {
     top: 2rem;
   }
 
-  .md\:top-6 {
-    top: 1.5rem;
+  .md\:left-20 {
+    left: 5rem;
+  }
+
+  .md\:left-40 {
+    left: 10rem;
+  }
+
+  .md\:left-80 {
+    left: 20rem;
+  }
+
+  .md\:left-96 {
+    left: 24rem;
+  }
+
+  .md\:left-\[22rem\] {
+    left: 22rem;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-8 {
+    grid-column: span 8 / span 8;
   }
 
   .md\:mb-0 {
@@ -2548,8 +2554,16 @@ input:checked + .toggle-bg {
     margin-top: 5rem;
   }
 
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-12 {
@@ -2567,6 +2581,10 @@ input:checked + .toggle-bg {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-44 {
+    width: 11rem;
   }
 
   .md\:w-96 {
@@ -2598,6 +2616,11 @@ input:checked + .toggle-bg {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
