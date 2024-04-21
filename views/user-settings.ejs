@@ -29,9 +29,9 @@
 
     <%- include('components/sidebar')%>
     
-    <div class="relative flex flex-col items-center w-full px-4 md:ml-72 xl:ml-40">
+    <div class="relative flex flex-col items-center w-full px-4 md:ml-40 xl:ml-40">
         <!-- Profile Photo -->
-        <div class="bg-white w-full md:w-[55rem] shadow-xl rounded-xl mt-16 md:mt-20">
+        <div class="bg-white w-full md:w-[55vw] xl:w-[55rem] shadow-xl rounded-xl mt-16 md:mt-20">
             <div class="w-full flex min-h-full flex-col justify-center px-0 py-6">            
                 <div class="mt-4 sm:mx-auto sm:w-full px-10">
                 <form class="space-y-6 mb-4" action="/profile_photo" method="POST" enctype="multipart/form-data">
@@ -63,7 +63,7 @@
         <!-- End of profile photo section -->
 
         <!-- User name -->
-        <div class="bg-white w-full md:w-[55rem] shadow-xl rounded-xl mt-8 md:mt-20">
+        <div class="bg-white w-full md:w-[55vw] xl:w-[55rem] shadow-xl rounded-xl mt-8 md:mt-20">
             <div class="w-full flex min-h-full flex-col justify-center px-0 py-6">            
                 <div class="mt-4 sm:mx-auto sm:w-full px-10">
                     <form class="space-y-6 mb-6" action="/update_name" method="POST">
@@ -90,7 +90,7 @@
         <!-- User name -->
 
         <!-- Password Update -->
-        <div class="bg-white w-full md:w-[55rem] shadow-xl rounded-xl mt-8 md:mt-20">
+        <div class="bg-white w-full md:w-[55vw] xl:w-[55rem] shadow-xl rounded-xl mt-8 md:mt-20">
             <div class="w-full flex min-h-full flex-col justify-center px-0 py-6">            
                 <div class="mt-4 sm:mx-auto sm:w-full px-10">
                     <form class="space-y-6 mb-6" action="/update_password" method="POST">
@@ -123,7 +123,7 @@
         <!-- End of password update section -->
 
         <!-- Delete Account Card -->
-        <div class="bg-red-200 w-full md:w-[55rem] shadow-xl rounded-xl mb-7 mt-8 md:mt-20">
+        <div class="bg-red-200 w-full md:w-[55vw] xl:w-[55rem] shadow-xl rounded-xl mb-7 mt-8 md:mt-20">
             <div class="w-full flex min-h-full flex-col justify-center px-0 py-6">            
                 <div class="mt-4 sm:mx-auto sm:w-full px-10">
                     <p class="text-xl mb-6">Permanently delete your account with all its data.</p>

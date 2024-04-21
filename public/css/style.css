@@ -1408,6 +1408,14 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.h-\[150vh\] {
+  height: 150vh;
+}
+
+.h-\[110vh\] {
+  height: 110vh;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -2610,6 +2618,26 @@ input:checked + .toggle-bg {
     width: fit-content;
   }
 
+  .md\:w-\[30rem\] {
+    width: 30rem;
+  }
+
+  .md\:w-\[40rem\] {
+    width: 40rem;
+  }
+
+  .md\:w-\[40vw\] {
+    width: 40vw;
+  }
+
+  .md\:w-\[50vw\] {
+    width: 50vw;
+  }
+
+  .md\:w-\[55vw\] {
+    width: 55vw;
+  }
+
   .md\:justify-end {
     justify-content: flex-end;
   }
@@ -2693,6 +2721,10 @@ input:checked + .toggle-bg {
 @media (min-width: 1280px) {
   .xl\:ml-40 {
     margin-left: 10rem;
+  }
+
+  .xl\:w-\[55rem\] {
+    width: 55rem;
   }
 }
 
