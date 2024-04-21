@@ -1408,10 +1408,6 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
-.h-\[150vh\] {
-  height: 150vh;
-}
-
 .min-h-full {
   min-height: 100%;
 }
@@ -2587,6 +2583,10 @@ input:checked + .toggle-bg {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:h-screen {
+    height: 100vh;
   }
 
   .md\:w-1\/2 {
