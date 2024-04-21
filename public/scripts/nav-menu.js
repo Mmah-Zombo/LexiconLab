@@ -4,6 +4,7 @@ const sidebar = document.getElementById('sidebar');
 
 function toggler() {
     sidebar.classList.toggle('hidden');
+    sidebar.classList.toggle('flex');
 }
 
 hamburger.addEventListener('click', toggler);
