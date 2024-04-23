@@ -1165,6 +1165,14 @@ input:checked + .toggle-bg {
   top: 0.75rem;
 }
 
+.left-8 {
+  left: 2rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
