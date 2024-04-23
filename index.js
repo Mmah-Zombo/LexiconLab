@@ -20,6 +20,7 @@ const updateUser = require('./controllers/updateUser');
 const deleteAccount = require('./controllers/deleteUser');
 const logout = require('./controllers/logoutUser');
 const historyView = require('./controllers/historyController');
+const bookmarksView = require('./controllers/bookmarksController');
 
 // Middleware Functions
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
@@ -75,6 +76,7 @@ app.post('/logout', logout);
 app.post('/delete_account', redirectIfNotLoggedIn, deleteAccount);
 
 app.get('/history', redirectIfNotLoggedIn, historyView);
+app.get('/bookmarks', redirectIfNotLoggedIn, bookmarksView);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')

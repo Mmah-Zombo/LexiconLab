@@ -1,9 +1,9 @@
 <!-- Burger -->
-<div id="hamburger" class="bg-charcoal h-10 w-16 rounded-md md:hidden fixed top-3 left-4 z-20">
+<div id="hamburger" class="bg-<%= typeof sidebarColor !== 'undefined' ? sidebarColor : 'charcoal' %> h-10 w-16 rounded-md md:hidden fixed top-3 left-4 z-20">
 </div>
 
 <!-- Sidebar -->
-<div id="sidebar" class="hidden fixed bottom-0 top-0 z-30 w-72 h-full bg-charcoal md:flex flex-col items-center justify-between transition-all">
+<div id="sidebar" class="hidden fixed bottom-0 top-0 z-30 w-72 h-full bg-<%= typeof sidebarColor !== 'undefined' ? sidebarColor : 'charcoal' %> md:flex flex-col items-center justify-between transition-all">
     <div id="cross" class="bg-antique-white h-10 w-16 rounded-md md:hidden fixed top-3 left-4 z-20">
     </div>
     <div class="w-full px-4 mt-8 h-fit">
@@ -24,7 +24,7 @@
                 <p class="ml-4 mb-2 text-lg text-<%= this_route == '/dictionary' ? selectedColor : 'white' %>">Dictionary</p>
             </a>
 
-            <a href="/dictionary" class="mt-5 w-full h-10 flex items-center justify-start border-b-2 border-<%= this_route == '/bookmarks' ? selectedColor : defaultColor %>">
+            <a href="/bookmarks" class="mt-5 w-full h-10 flex items-center justify-start border-b-2 border-<%= this_route == '/bookmarks' ? selectedColor : defaultColor %>">
                 <div class="h-fit w-fit mb-2 ">
                     <svg class="w-6 h-6 text-<%= this_route == '/bookmarks' ? selectedColor : defaultColor %> dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z"/>
