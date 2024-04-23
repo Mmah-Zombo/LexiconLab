@@ -2012,6 +2012,10 @@ input:checked + .toggle-bg {
   padding-top: 10rem;
 }
 
+.pt-32 {
+  padding-top: 8rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2678,6 +2682,42 @@ input:checked + .toggle-bg {
     width: 16rem;
   }
 
+  .md\:w-\[55rem\] {
+    width: 55rem;
+  }
+
+  .md\:w-\[60vw\] {
+    width: 60vw;
+  }
+
+  .md\:w-\[65vw\] {
+    width: 65vw;
+  }
+
+  .md\:w-\[70vw\] {
+    width: 70vw;
+  }
+
+  .md\:w-\[68vw\] {
+    width: 68vw;
+  }
+
+  .md\:w-\[55\\8vw\] {
+    width: 55\8vw;
+  }
+
+  .md\:w-\[58vw\] {
+    width: 58vw;
+  }
+
+  .md\:w-56 {
+    width: 14rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:justify-end {
     justify-content: flex-end;
   }
@@ -2685,6 +2725,10 @@ input:checked + .toggle-bg {
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .md\:pt-40 {
+    padding-top: 10rem;
   }
 
   .md\:text-left {
@@ -2777,6 +2821,22 @@ input:checked + .toggle-bg {
   .xl\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .xl\:w-\[60rem\] {
+    width: 60rem;
+  }
+
+  .xl\:w-96 {
+    width: 24rem;
+  }
+
+  .xl\:w-64 {
+    width: 16rem;
+  }
+
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
