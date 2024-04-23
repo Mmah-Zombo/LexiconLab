@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    user = authUser || null;
+    let user = authUser || null;
     let defaultColor  = 'cerise'; 
     let selectedColor = 'antique-white';
     const this_route = req.route.path;

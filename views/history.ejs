@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('components/header'); -%>
+</head>
+<body class="bg-naples-yellow relative">
+    <% if (message && message.length > 0) { %>
+        <div class="fixed top-10 left-[15%] md:left-[22rem] z-50">
+            <div id="alert-border-3" class="flex items-center p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
+                <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <div class="ms-3 text-sm font-medium mr-4">
+                <%= message %>
+                </div>
+                <button id="close" type="button" class="ms-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
+                <span class="sr-only">Dismiss</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                </button>
+            </div>
+        </div>
+    <% } %>
+
+    <div class="fixed top-3 right-4 md:top-6 md:right-7 bg-charcoal h-10 md:h-12 w-32 md:w-44 rounded-lg flex items-center justify-center z-20">
+        <p class="text-xl md:text-2xl text-white text-opacity-50 ">Lexiconlab</p>
+    </div>
+
+    <%- include('components/sidebar')%>
+    
+    <div class="relative flex flex-col items-center w-fit px-4 md:ml-[21rem]">
+        <div class="absolute left-4 top-14 bg-cerise h-10 md:h-12 w-32 md:w-44 rounded-lg flex items-center justify-center z-20">
+            <p class="text-xl md:text-2xl text-white">Delete All</p>
+        </div>
+        <!-- Search History -->
+        <div class="bg-charcoal w-full md:w-[55vw] xl:w-[55rem] shadow-xl rounded-xl mt-8 md:mt-32 px-10 pt-6 pb-10">
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+
+            <div class="w-full h-20 mt-2 flex items-center justify-between border-b border-white">            
+                <div class="w-fit ">
+                    <p class="text-lg text-white">Word</p>
+                    <p class="text-white text-lg opacity-60">date</p>
+                </div>
+                <div class="w-10 h-8 bg-white">
+                </div>
+            </div>
+        </div>
+        <!-- User name -->
+    </div>
+    
+    <script src="/scripts/image-preview.js"></script>
+    <%- include('components/footer')%>
+</body>
+</html>

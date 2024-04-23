@@ -19,6 +19,7 @@ const updateProfilePhoto = require('./controllers/profile_photoController');
 const updateUser = require('./controllers/updateUser');
 const deleteAccount = require('./controllers/deleteUser');
 const logout = require('./controllers/logoutUser');
+const historyView = require('./controllers/historyController');
 
 // Middleware Functions
 const sessionSetter = require('./controllers/middlewares/sessionSetter');
@@ -72,6 +73,8 @@ app.post('/update_password', redirectIfNotLoggedIn, updateUser.updatePassword);
 
 app.post('/logout', logout);
 app.post('/delete_account', redirectIfNotLoggedIn, deleteAccount);
+
+app.get('/history', redirectIfNotLoggedIn, historyView);
 
 app.listen(4000, () => {
     console.log('App started on port 4000')
